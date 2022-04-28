@@ -1,0 +1,973 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Mukta:wght@200&family=Nanum+Gothic&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/*BARRA DE NAVEGACION------------------------------------------------------------------------------------------------------*/
+
+.texto-oferta{
+    background-color: rgb(255, 254, 251);
+    height: 5%;
+    font-weight: 600;
+    color: rgb(3, 3, 3);
+    margin-bottom: 0%;
+    font-size: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-color: #fff;
+}
+
+a,li{
+    font-family: 'Nanum Gothic' , sans-serif;
+}
+
+.header-logo img{
+    width: 80px;
+}
+
+header{
+    background-color: #FAD707;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+
+.nav-menu ul{
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu li{
+    margin-right: 1.5rem;
+    color:  #000;
+}
+
+.nav-menu a:hover{
+    color:#000;
+}
+
+.nav-menu li:last-child{
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.2rem;
+}
+
+.nav-menu li:last-child:hover{
+    background: transparent;
+    border: 2px solid #000000;
+} 
+
+.menu-icon img{
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+}
+
+.menu-icon, #check{
+    display: none;
+}
+
+@media (max-width:768px){
+    .checkbtn{
+        display: block;
+    }
+    .menu-icon{
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+
+    .nav-menu ul{
+        display: block;
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        background: #FAD707;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+    }
+
+    .nav-menu ul li{
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .nav-menu ul li:last-child{
+        background: none;
+        padding: 1rem;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+        transition: all 0.25s;
+    }
+}
+
+/*INICIO-------------------------------------------------------------------------------------------*/
+
+.main-header{
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+}
+
+.main-header{
+    background-image: url(/img/fondo\ header.jpeg);
+    min-height: 880px;
+}
+
+.overlay{
+    align-items: center;
+    background-color: #0000004d;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.content{
+    color: #fff;
+    max-width: 650px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    width: 350px;
+}
+
+.titulo{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.descripcion{
+    font-size: 1.5rem;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+    /*GALERIA CON GRID*/
+
+
+    .encabezado-galeria{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        background-color: #FAD707;
+        font-family: 'Nanum Gothic' , sans-serif;
+        font-size: 4vh;
+        margin: 40px;
+    }
+
+
+.contenedor-galeria{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 150px;
+    padding: 20px;
+    grid-gap: 10px;
+}
+
+.img-galeria{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgb(0, 0, 0, .1);
+}
+
+.item-galeria{
+    position: relative;
+    transition: .5s;
+}
+
+.item-galeria img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.galeria-titulo{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+}
+
+.item-galeria:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.item-galeria:nth-child(6) {
+    grid-column-start: span 2;
+}
+
+.item-galeria:nth-child(3) {
+    grid-row-start: span 3;
+}
+
+.item-galeria:nth-child(1) {
+    grid-row-start: span 4;
+}
+
+.item-galeria:nth-child(7) {
+    grid-row-start: span 2;
+}
+
+.item-galeria:nth-child(5) {
+    grid-row-start: span 3;
+}
+
+.item-galeria:nth-child(4) {
+    grid-row-start: span 3;
+}
+
+.item-galeria:nth-child(8) {
+    grid-row-start: span 2;
+}
+
+.item-galeria:nth-child(10) {
+    grid-row-start: span 2;
+}
+
+.item-galeria:nth-child(9) {
+    grid-row-start: span 2;
+}
+
+@media  (max-width:1020px) {
+    .contenedor-galeria{
+        grid-template-columns: repeat(2, 1fr);
+    } 
+}
+
+@media  (max-width:768px) {
+    .contenedor-galeria{
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    .encabezado-galeria{
+        font-size: 2.5vh;
+    }
+
+}
+
+@media (max-width:400px){
+    .parrafo-descripcion{
+        font-size: 1.8vh;
+    }
+}
+
+
+/*quienes somos--------------------------------------------------------------------------*/
+
+#titulo-descripcion{
+    height: 5vh;
+    margin: 10%;
+    font-family: 'Nanum Gothic' , sans-serif;
+    background-color: #FAD707;
+
+    display: flex;
+    justify-content: center;
+}
+
+.descripcion{
+    justify-content: center;
+    flex-direction: column;
+}
+
+.parrafo-descripcion{
+    height: 5%;
+    margin: 10%;
+
+    font-family: 'Nanum Gothic' , sans-serif;
+}
+
+@media (max-width: 410px) {
+    #titulo-descripcion{
+        font-size: 3vh;
+    }
+
+}
+
+/*el proyecto-------------------------------------------------------------------------------*/
+
+.img-proyecto{
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+}
+
+.img-proyecto{
+    background-image: url(/img/fondo\ proyecto.jpeg);
+    min-height: 880px;
+}
+
+.elementos-proyecto{
+    align-items: center;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.37);
+    height: 100%;
+    justify-content: center;
+    left: 0%;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+}
+
+.content-proyecto{
+    color: #fff;
+    max-width: 650%;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    width: 350%;
+}
+
+.titulo-proyecto{
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Nanum Gothic' , sans-serif;
+}
+
+.descripcion-proyecto{
+    margin-top: 0%;
+    margin-bottom: 1rem;;
+}
+
+.titulo-proyecto2{
+    height: 5vh;
+    margin: 10%;
+    font-family: 'Nanum Gothic' , sans-serif;
+    background-color: #FAD707;
+
+    display: flex;
+    justify-content: center;
+    font-size: 4vh;
+}
+
+
+
+@media (max-width:800px) {
+    .titulo-proyecto{
+        font-size: 4vh;
+    }
+
+    .titulo-proyecto2{
+        font-size: 2.5vh;
+    }
+    .descripcion-proyecto{
+        font-size: 1.5vh;
+    }
+    
+}
+
+@media screen and (max-width:1200px) {
+    .div-proyecto{
+        width: 90%;
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
+/*columnas*/
+
+.proyecto{
+    margin: auto;
+    max-width: 1100px;
+    font-family: 'Nanum Gothic' , sans-serif;
+}
+
+.contenedores{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contenedor1{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.contenedor1-col1{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.contenedor1-col1-text{
+    width: 100%;
+}
+
+.contenedor1-titulo{
+    border-bottom: 2px solid #FAD707;
+    padding-bottom: 10px;
+}
+
+.contenedor1-text{
+    padding: 20px 0;
+}
+
+.contenedor1-col2{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.contenedor1-img{
+    justify-content: left;
+}
+
+@media (max-width:1200px) {
+    .proyecto{
+        max-width: 90%;
+    }
+}
+
+/*PATROCINADORES--------------------------------------------------------------------------------------------*/
+
+.img-patrocinadores{
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+}
+
+.img-patrocinadores{
+    background-image: url(/img/patrocinadores.jpeg);
+    min-height: 880px;
+}
+
+.elementos-patrocinadores{
+    align-items: center;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.37);
+    height: 100%;
+    justify-content: center;
+    left: 0%;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+}
+
+.content-patrocinadores{
+    color: #fff;
+    max-width: 650%;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    width: 350%;
+}
+
+.titulo-patrocinadores{
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Nanum Gothic' , sans-serif;
+}
+
+.descripcion-patrocinadores{
+    margin-top: 0%;
+    margin-bottom: 1rem;
+}
+
+
+
+.titulo2-patrocinadores{
+    background-color: #FAD707;
+    font-family: 'Nanum Gothic' , sans-serif;
+    color: rgb(0, 0, 0);
+    margin: 10%;
+    height: 5vh;
+    font-size: 4vh;
+    justify-content: center;
+    text-align: center;
+}
+
+.descripcion2-patrocinadores{
+    color: #000;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10% 5% 20% 5%;
+}
+
+.contenedor-div-patro{
+    background-color: rgb(241, 241, 241);
+}
+
+.img{
+    margin: 150px;
+    height: 150px;
+    letter-spacing: 10px;
+}
+
+.row{
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 100px;
+}
+
+#titulo-patrocinadores{
+    font-family: 'Anton', sans-serif;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+}
+
+@media  screen and (max-width:850px) {
+    .titulo-patrocinadores{
+        font-size: 2rem;
+    }
+    .titulo2-patrocinadores{
+        font-size: 3vh;
+    }
+    .descripcion2-patrocinadores{
+        font-size: 1rem;
+        margin: 15% 10% 25% 10%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .titulo2-patrocinadores{
+        font-size: 2vh;
+    }
+    .descripcion-patrocinadores{
+        font-size: 0.7rem;
+
+    }
+
+
+}
+
+
+
+
+/*VOLUNARIOS------------------------------------------------------------------------------------------*/
+
+
+.img-voluntarios{
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+}
+
+.img-voluntarios{
+    background-image: url(/img/fondo\ voluntarios.jpeg);
+    min-height: 880px;
+}
+
+.elementos-voluntarios{
+    align-items: center;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.37);
+    height: 100%;
+    justify-content: center;
+    left: 0%;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+}
+
+.content-voluntarios{
+    color: #fff;
+    max-width: 650%;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    width: 350%;
+}
+
+.titulo-voluntarios{
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Nanum Gothic' , sans-serif;
+}
+
+.title-voluntarios{
+    font-family: 'Nanum Gothic' , sans-serif;
+    text-align: center;
+    font-size: 4vh;
+    margin: 10%;
+    background-color: #FAD707;
+}
+
+.parrafo-voluntarios{
+    font-family: 'Nanum Gothic' , sans-serif;
+    text-align: center;
+    font-size: 2.5vh;
+    height: 10%;
+    margin: 0 3% 0 3%;
+}
+
+@media (max-width:478px){
+    .titulo-voluntarios{
+        font-size: 2rem;
+    }
+
+    .title-voluntarios{
+        font-size: 1.5rem;
+    }
+}
+
+
+/*formulario*/
+
+
+.form-input{
+    font-family: 'Nanum Gothic' , sans-serif;
+    font-size: 1rem;
+    padding: .8em 1em;
+    outline: none;
+    border: none;
+    border: 1px #FAD707;
+    border-radius: 0.2em;
+}
+
+.form-input--message{
+    resize: none;
+    padding: 1.8em 1em;
+    margin-bottom: 0.5em;
+}
+
+.form{
+    background-color: #69696949;
+    margin:  auto;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 1em;
+    padding: 3.5em 1.5em;
+}
+
+.form-container{
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%;
+}
+
+.form-titulo{
+    text-align: center;
+    font-size: 1.9rem;
+    margin-bottom: 0.4em;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 5px;
+    color: #FAD707;
+}
+
+.form-cta{
+    font-family: 'Nanum Gothic' , sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    font-weight: 300;
+    font-size:  1rem;
+    padding: .7em 0;
+    border-radius: .2em;
+    cursor: pointer;
+}
+
+
+
+.img-formulario{
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    margin: 50px 0px 10px 0px;
+}
+
+.img-formulario{
+    background-image: url(./img/fondo\ formulario.jpeg);
+    min-height: 700px;
+}
+
+.elementos-formulario{
+    align-items: center;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.37);
+    height: 100%;
+    justify-content: center;
+    left: 0%;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+}
+
+
+/*DONACIONES---------------------------------------------------------------------------------*/
+
+
+
+.img-donaciones{
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+}
+
+.img-donaciones{
+    background-image: url(./img/fondo\ donaciones.jpeg);
+    min-height: 880px;
+}
+
+.elementos-donaciones{
+    align-items: center;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.37);
+    height: 100%;
+    justify-content: center;
+    left: 0%;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+}
+
+.content-donaciones{
+    color: #fff;
+    max-width: 650%;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    width: 350%;
+}
+
+.titulo-donaciones{
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Nanum Gothic' , sans-serif;
+}
+
+
+.title-donaciones{
+    font-family: 'Nanum Gothic' , sans-serif;
+    text-align: center;
+    font-size: 4vh;
+    margin: 10%;
+    background-color: #FAD707;
+}
+
+.parrafo-donaciones{
+    font-family: 'Nanum Gothic' , sans-serif;
+    text-align: center;
+    font-size: 2.5vh;
+    height: 10%;
+    margin: 0 3% 0 3%;
+}
+
+
+.contenedor-donar{
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nanum Gothic' , sans-serif;
+    flex-wrap: wrap;
+}
+
+.tabla{
+    width: 33%;
+    height: 550px;
+    margin: auto;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 0px #313131;
+    padding: 60px;
+    text-align: center;
+    flex-grow: 1;
+    color: #131313;
+}
+
+.tabla>h2{
+    display: block;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.tabla img{
+    width: 64px;
+    margin-bottom: 35px;
+}
+
+.tabla>h3{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.tabla>p{
+display: block;
+margin-bottom: 20px;
+}
+
+.boton{
+    display: inline-block;
+    border: 1px solid #000;
+    width: 150px;
+    padding: 12px;
+    background: #FAD707;
+    text-decoration: none;
+    color: #070707;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600px;
+    margin: auto;
+}
+
+.tabla:hover{
+    background: #b5df52;
+    color: #000;
+    transition: 0.2s all;
+    transform: scale(1.1);
+}
+
+@media  screen and (max-width: 1000px) {
+    .tabla{
+        width: 45%;
+        max-width: none;
+        flex-grow: initial;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+}
+@media  screen and (max-width: 700px) {
+    .tabla{
+        width: 45%;
+        padding: 30px;
+    }
+    .tabla > h2{
+        margin-top: 40px;
+    }
+}
+
+@media  screen and (max-width: 550px) {
+    .tabla{
+        width: 85%;
+        padding: 20px;
+    }
+}
+
+@media (max-width:565px){
+    .titulo-donaciones{
+        font-size: 2rem;
+    }
+    .title-donaciones{
+        font-size: 2vh;
+    }
+    .parrafo-donaciones{
+        font-size: 1.9vh;
+        margin: 0 3% 5% 3%;
+    }
+}
+
+
+
+/*PIE DE PAGINA----------------------------------------------------------------------------*/
+
+.pie-de-pagina{
+    width: 100%;
+    background-color: #FAD707;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 40px;
+}
+
+.grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.footer{
+    color: rgb(3, 3, 3);
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-family: 'Nanum Gothic' , sans-serif;
+}
+
+.parrafo-footer{
+    color: #070707;
+    margin-bottom: 10px;
+}
+
+.red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    transition: all;
+}
+
+.red-social a:hover{
+    color:  #FAD707;
+}
+
+.grupo-2{
+    background-color: #ddbd06;
+    text-align: center;
+}
+
+@media  screen and (max-width:800px){
+    .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
+@media (max-width:1020px){
+    .pie-de-pagina{
+        margin-top: 950px;
+    }
+}
